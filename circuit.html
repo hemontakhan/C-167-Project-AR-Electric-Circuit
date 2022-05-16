@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>Virtual Electric Circuit</title>
+  
+   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+  </head>
+ <body>
+  <a-scene>
+
+    <a-sky color="green"></a-sky>
+
+   <a-entity id="#camera" camera  position="0 0 5" wasd-con></a-entity>
+
+
+  <a-plane id="bulb" width='10' height="10"  src="./images/bulb.png" position="-30 6 -35"></a-plane>
+  <a-plane id="battery" width="20" height='20' src="./images/battery.png" position="0 -7 -35"></a-plane>
+  <a-plane id="switch" width="10" height="10" src="./images/switch.png" position="30 4 -35"></a-plane>
+
+  <a-plane id="circuit-board" width="100" height="50" position="0 0.5 -40" color="white"></a-plane>
+
+  <a-plane  width="2"  height="0.5"  position="30 4 -35" 
+    color="red" 
+   animation="property:position;to: -30 4 -35;loop: true;easing: linear; dur:1000"></a-plane>
+
+   <a-plane  width="0.5"  height="2"  position="-30 4 -35" 
+    color="red" 
+   animation="property:position;to: -30 -7 -35;loop: true;easing: linear; dur:1000"></a-plane>
+
+   <a-plane  width="2"  height="0.5"  position="-30 -7 -35" 
+    color="red" 
+   animation="property:position;to: 0 -7.5 -35;loop: true;easing: linear; dur:1000"></a-plane>
+
+   <a-plane id="electron-flow-animation" width="2"  height="0.5"  position="0 -7 -35" 
+    color="red" 
+   animation="property:position;to: 30 -7 -35;loop: true;easing: linear; dur:1000"></a-plane>
+
+   <a-plane id="electron-flow-animation" width="0.5"  height="2"  position="30 -7 -35" 
+    color="red" 
+   animation="property:position;to: 30 4 -35;loop: true;easing: linear; dur:1000"></a-plane>
+
+  </a-scene>  
+ </body>
+</html>
